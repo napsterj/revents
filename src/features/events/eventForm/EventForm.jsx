@@ -8,6 +8,7 @@ export default function EventForm({
   createEvent,
   selectedEvent,
   updateEvent,  
+  history
 }) {
   const initialValue = selectedEvent ?? {
     title: "",
@@ -106,7 +107,8 @@ export default function EventForm({
           />
           <Button
             type="submit"
-            onClick={() => setFormOpen(false)}
+            onClick={() => history.push('/events')}
+            //onClick={() => setFormOpen(false)}
             floated="right"
             content="Cancel"
           />
