@@ -6,7 +6,7 @@ import SignedOutMenu from "./SignedOutMenu";
 
 export default function NavBar() {
   const history = useHistory();
-  const [authenticated, setAuthenticated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(false);  
 
   function handleSignOut() {
       setAuthenticated(false);
@@ -21,16 +21,16 @@ export default function NavBar() {
           Re-vents
         </Menu.Item>
         <Menu.Item as={NavLink} to="/events" name='Events'></Menu.Item>
-
-        {authenticated && 
-        <Menu.Item as={NavLink} to="/createEvent">
-          <Button                        
+        <Menu.Item as={NavLink} to="/sandbox" name='Sandbox'></Menu.Item>
+        {authenticated && (
+        <Menu.Item as={NavLink} to='/createEvent' name='CreateEvent'>
+          <Button             
             inverted
-            positive
+            positive            
             content='Create Event'
           /> 
         </Menu.Item>
-        }
+        )}
         
         {authenticated ? (<SignedInMenu signOut={handleSignOut}/>)  
                        : (<SignedOutMenu setAuthenticated={setAuthenticated} />)
