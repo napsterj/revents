@@ -10,10 +10,8 @@ import { Provider } from "react-redux";
 import { ConfigureStore } from "./app/store/configureStore";
 import ScrollToTop from "./app/layout/ScrollToTop";
 import 'react-toastify/dist/ReactToastify.min.css';
-import { loadEvents } from "./features/events/eventActions";
 
 const store = ConfigureStore();
-store.dispatch(loadEvents());
 
 const rootEl = document.getElementById("root");
 

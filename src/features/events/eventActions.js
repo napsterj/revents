@@ -14,6 +14,14 @@ export function loadEvents() {
         }
     }
 }
+
+export function loadEventsFromFirestore(events) {
+     return {
+         type: FETCH_EVENTS,
+         payload: events
+     }   
+}
+
 export function createEvent(event) {
     return {
         type : CREATE_EVENT,

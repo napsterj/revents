@@ -7,6 +7,7 @@ import EventListAttendees from "./EventListAttendees";
 import {format} from 'date-fns';
 
 export default function EventListItem({ event }) {
+  
   const dispatch = useDispatch()
   return (
     <>
